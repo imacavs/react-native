@@ -2,7 +2,8 @@ import React from 'react';
 import {StyleSheet, View, Text, ScrollView} from 'react-native';
 // import ListaDePedidos from './src/feature/Home/index';
 import Actualizacion from './src/feature/Home/Actualizacion';
-import DistribucionVolumen from './src/feature/otroTest/index';
+// import DistribucionVolumen from './src/feature/otroTest/index';
+import Otror from './src/feature/otroTest2';
 
 const styles = StyleSheet.create({
   container: {
@@ -29,14 +30,15 @@ const App = () => {
     <ScrollView style={styles.container}>
       <Actualizacion />
       <View>
-        <Text style={styles.title}>Distribucion del volumen en septiembre</Text>
+        <Text style={styles.title}>Cuenta Corriente</Text>
       </View>
+      <Otror />
       {/* <ListaDePedidos />
       <ListaDePedidos />
       <ListaDePedidos /> */}
+      {/* <DistribucionVolumen />
       <DistribucionVolumen />
-      <DistribucionVolumen />
-      <DistribucionVolumen />
+      <DistribucionVolumen /> */}
     </ScrollView>
   );
 };
