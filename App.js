@@ -1,7 +1,8 @@
 import React from 'react';
 import {StyleSheet, View, Text, ScrollView} from 'react-native';
-import ListaDePedidos from './src/feature/Home/index';
+// import ListaDePedidos from './src/feature/Home/index';
 import Actualizacion from './src/feature/Home/Actualizacion';
+import DistribucionVolumen from './src/feature/otroTest/index';
 
 const styles = StyleSheet.create({
   container: {
@@ -18,24 +19,24 @@ const styles = StyleSheet.create({
     marginBottom: 18,
   },
   actualizacion: {
-    flexDirection: 'row-reverse',
+    // flexDirection: 'row-reverse',
+    justifyContent: 'center',
   },
 });
 
 const App = () => {
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.actualizacion}>
-        <Text>
-          <Actualizacion />
-        </Text>
-      </View>
+      <Actualizacion />
       <View>
-        <Text style={styles.title}>Listado De Pedidos</Text>
+        <Text style={styles.title}>Distribucion del volumen en septiembre</Text>
       </View>
+      {/* <ListaDePedidos />
       <ListaDePedidos />
-      <ListaDePedidos />
-      <ListaDePedidos />
+      <ListaDePedidos /> */}
+      <DistribucionVolumen />
+      <DistribucionVolumen />
+      <DistribucionVolumen />
     </ScrollView>
   );
 };
