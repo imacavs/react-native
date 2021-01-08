@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Card, CardItem, Body} from 'native-base';
 import {StyleSheet, Text, View} from 'react-native';
 
@@ -40,6 +40,7 @@ const Cards = ({cliente}) => {
             <Text style={styles.datos}>Telefono:</Text>
             <Text style={styles.datos}>Email:</Text>
             <Text style={styles.datos}>Estado:</Text>
+            <Text style={styles.datos}>prioridad:</Text>
           </View>
           <View style={styles.respuestaDatos}>
             <Text style={styles.respuestaDatos2}>{cliente.razonSocial}</Text>
@@ -47,6 +48,7 @@ const Cards = ({cliente}) => {
             <Text style={styles.respuestaDatos2}>{cliente.telefono}</Text>
             <Text style={styles.respuestaDatos2}>{cliente.email}</Text>
             <Text style={styles.respuestaDatos2}>{cliente.estado}</Text>
+            <Text style={styles.respuestaDatos2}>{cliente.prioridad}</Text>
           </View>
         </Body>
       </CardItem>

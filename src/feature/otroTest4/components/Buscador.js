@@ -1,3 +1,4 @@
+import {View} from 'native-base';
 import React from 'react';
 import {TextInput, StyleSheet} from 'react-native';
 
@@ -13,13 +14,15 @@ const styles = StyleSheet.create({
 
 const Buscador = ({value, setValue}) => {
   return (
-    <TextInput
-      style={styles.container}
-      onChangeText={(text) => {
-        setValue(text);
-      }}
-      value={value}
-    />
+    <View>
+      <TextInput
+        style={styles.container}
+        onChangeText={(text) => {
+          setValue(text);
+        }}
+        value={value}
+      />
+    </View>
   );
 };
 
