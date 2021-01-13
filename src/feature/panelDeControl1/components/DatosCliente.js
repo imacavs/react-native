@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-// import Icon from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 const styles = StyleSheet.create({
   container: {
@@ -8,33 +8,36 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     margin: 10,
     flex: 1,
+    height: 150,
   },
   datos: {
-    display: 'flex',
     flexDirection: 'row',
   },
-  number: {
+  containerNumber: {
     flex: 1,
-    fontSize: 60,
+    justifyContent: 'center',
+  },
+  number: {
+    fontSize: 40,
     marginLeft: 5,
+    textAlign: 'center',
   },
   verMas: {
     flex: 1,
-    alignSelf: 'flex-end',
+    textAlign: 'center',
     color: 'gray',
     paddingBottom: 16,
+    marginLeft: 45,
   },
   title: {
     color: 'gray',
     fontWeight: 'bold',
+    textAlign: 'center',
   },
   icon: {
-    // flex: 1,
-    display: 'flex',
-    alignSelf: 'flex-end',
-    marginRight: 5,
-    marginBottom: 12,
-    fontSize: 30,
+    marginRight: 30,
+    fontSize: 20,
+    flex: 1,
   },
 });
 
@@ -44,15 +47,19 @@ const DatosCliente = ({number, title}) => {
       <View>
         <Text style={styles.title}>{title}</Text>
       </View>
-      <View style={styles.datos}>
+      <View style={styles.containerNumber}>
         <Text style={styles.number}>{number}</Text>
+      </View>
+      <View style={styles.datos}>
         <Text style={styles.verMas}>Ver mas</Text>
-        {/* <Icon
-          name="rightcircle"
-          size={30}
-          color="#A93226"
-          style={styles.icon}
-        /> */}
+        <View>
+          <Icon
+            name="rightcircle"
+            size={30}
+            color="#A93226"
+            style={styles.icon}
+          />
+        </View>
       </View>
     </View>
   );

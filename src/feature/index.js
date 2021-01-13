@@ -12,7 +12,7 @@ import {StyleSheet, View, Text} from 'react-native';
 // import ReduxTest from './ReduxTest';
 
 // import ClientesVista1 from './clientes1/index';
-// import PanelControl from './panelDeControl1/index';
+import PanelControl from './panelDeControl1/index';
 
 import DetalleCliente from './detalleCliente/index';
 import Actualizacion from './detalleCliente/components/Actualizacion';
@@ -25,7 +25,8 @@ import IconFont from 'react-native-vector-icons/FontAwesome5';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#F8F9F9',
+    backgroundColor: 'white',
+    // backgroundColor: '#F8F9F9',
     paddingHorizontal: 16,
     paddingVertical: 16,
     marginBottom: 16,
@@ -135,12 +136,12 @@ const App = () => {
       </View> */}
       {/* <ReduxTest /> */}
 
-      {/* <View style={styles.padreTitle}>
+      <View style={styles.padreTitle}>
         <Text style={styles.title}>PANEL DE CONTROL</Text>
       </View>
-      <PanelControl /> */}
+      <PanelControl />
 
-      <Actualizacion />
+      {/* <Actualizacion />
       <DetalleCliente />
       <View style={{display: 'flex', flexDirection: 'row'}}>
         <Card title={'PEDIDOS'} icon={iconoPedidos} iconButton={iconButton} />
@@ -166,8 +167,7 @@ const App = () => {
         <Card title={'ENCUESTAS'} icon={iconEncuesta} iconButton={iconButton} />
         <Card title={'TAGS'} icon={iconTags} iconButton={iconButton} />
       </View>
-      {/* <Contactos /> */}
-      <Card title={'CONTACTOS'} icon={iconContactos} iconButton={iconButton} />
+      <Card title={'CONTACTOS'} icon={iconContactos} iconButton={iconButton} /> */}
     </View>
   );
 };
