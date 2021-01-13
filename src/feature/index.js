@@ -12,11 +12,20 @@ import {StyleSheet, View, Text} from 'react-native';
 // import ReduxTest from './ReduxTest';
 
 // import ClientesVista1 from './clientes1/index';
-import PanelControl from './panelDeControl1/index';
+// import PanelControl from './panelDeControl1/index';
+
+import DetalleCliente from './detalleCliente/index';
+import Actualizacion from './detalleCliente/components/Actualizacion';
+import Card from './detalleCliente/components/Card';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import IconSimple from 'react-native-vector-icons/SimpleLineIcons';
+import IconAnt from 'react-native-vector-icons/AntDesign';
+import IconFeather from 'react-native-vector-icons/Feather';
+import IconFont from 'react-native-vector-icons/FontAwesome5';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: '#F8F9F9',
     paddingHorizontal: 16,
     paddingVertical: 16,
     marginBottom: 16,
@@ -44,6 +53,21 @@ const styles = StyleSheet.create({
     height: 1.5,
   },
 });
+
+const iconoDinero = <Icon name="attach-money" size={25} color="#A93226" />;
+const iconoPedidos = (
+  <IconSimple name="screen-tablet" size={25} color="#A93226" />
+);
+const iconButton = <IconAnt name="rightcircle" size={18} color="#A93226" />;
+const iconEncuesta = <IconAnt name="profile" size={25} color="#A93226" />;
+const iconPallets = (
+  <IconFeather name="align-justify" size={25} color="#A93226" />
+);
+const iconVolumenH = <IconFeather name="bar-chart" size={25} color="#A93226" />;
+const iconContactos = <IconAnt name="idcard" size={35} color="#A93226" />;
+const iconTags = <IconAnt name="infocirlceo" size={25} color="#A93226" />;
+const iconVolumen = <IconAnt name="piechart" size={25} color="#A93226" />;
+const iconCtaCte = <IconFont name="piggy-bank" size={25} color="#A93226" />;
 
 // let clientes = [
 //   {
@@ -110,10 +134,40 @@ const App = () => {
           ))}
       </View> */}
       {/* <ReduxTest /> */}
-      <View style={styles.padreTitle}>
+
+      {/* <View style={styles.padreTitle}>
         <Text style={styles.title}>PANEL DE CONTROL</Text>
       </View>
-      <PanelControl />
+      <PanelControl /> */}
+
+      <Actualizacion />
+      <DetalleCliente />
+      <View style={{display: 'flex', flexDirection: 'row'}}>
+        <Card title={'PEDIDOS'} icon={iconoPedidos} iconButton={iconButton} />
+        <Card title={'PRECIOS'} icon={iconoDinero} iconButton={iconButton} />
+      </View>
+      <View style={{display: 'flex', flexDirection: 'row'}}>
+        <Card title={'VOLUMEN'} icon={iconVolumen} iconButton={iconButton} />
+        <Card
+          title={'volumen historico'}
+          icon={iconVolumenH}
+          iconButton={iconButton}
+        />
+      </View>
+      <View style={{display: 'flex', flexDirection: 'row'}}>
+        <Card title={'CTA CTE'} icon={iconCtaCte} iconButton={iconButton} />
+        <Card
+          title={'CTA CTE PALLETS'}
+          icon={iconPallets}
+          iconButton={iconButton}
+        />
+      </View>
+      <View style={{display: 'flex', flexDirection: 'row'}}>
+        <Card title={'ENCUESTAS'} icon={iconEncuesta} iconButton={iconButton} />
+        <Card title={'TAGS'} icon={iconTags} iconButton={iconButton} />
+      </View>
+      {/* <Contactos /> */}
+      <Card title={'CONTACTOS'} icon={iconContactos} iconButton={iconButton} />
     </View>
   );
 };
