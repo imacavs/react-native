@@ -10,11 +10,13 @@ import {StyleSheet, View, Text} from 'react-native';
 // import Buscador from './otroTest4/components/Buscador';
 // import Switch from './otroTest4/components/Selector';
 // import ReduxTest from './ReduxTest';
-import ClientesVista1 from './clientes1/index';
+
+// import ClientesVista1 from './clientes1/index';
+import PanelControl from './panelDeControl1/index';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#F7F9F9',
+    backgroundColor: 'white',
     paddingHorizontal: 16,
     paddingVertical: 16,
     marginBottom: 16,
@@ -22,7 +24,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
     color: '#000',
     fontWeight: 'bold',
     marginTop: 10,
@@ -88,11 +90,12 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.padreTitle}>
+      {/* <View style={styles.padreTitle}>
         <Text style={styles.title}>CLIENTES</Text>
       </View>
       <View style={styles.lineaDivisoria} />
-      <ClientesVista1 />
+      <ClientesVista1 /> */}
+
       {/* <Actualizacion />
 
       <View>
@@ -107,6 +110,10 @@ const App = () => {
           ))}
       </View> */}
       {/* <ReduxTest /> */}
+      <View style={styles.padreTitle}>
+        <Text style={styles.title}>PANEL DE CONTROL</Text>
+      </View>
+      <PanelControl />
     </View>
   );
 };
