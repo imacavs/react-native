@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 const styles = StyleSheet.create({
   container: {
@@ -53,6 +54,21 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     height: 6,
   },
+  datos: {
+    flexDirection: 'row',
+  },
+  verMas: {
+    flex: 1,
+    textAlign: 'right',
+    color: 'gray',
+    paddingBottom: 16,
+    marginRight: 10,
+  },
+  icon: {
+    marginRight: 30,
+    fontSize: 20,
+    flex: 1,
+  },
 });
 
 const Volumen = () => {
@@ -76,6 +92,17 @@ const Volumen = () => {
           </View>
           <View>
             <Text>Toneladas entregadas sobre proyectadas</Text>
+          </View>
+          <View style={styles.datos}>
+            <Text style={styles.verMas}>Ver mas</Text>
+            <View>
+              <Icon
+                name="rightcircle"
+                size={30}
+                color="#A93226"
+                style={styles.icon}
+              />
+            </View>
           </View>
         </View>
       </View>
