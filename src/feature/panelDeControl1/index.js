@@ -37,7 +37,7 @@ const PanelControl = () => {
     <View style={{}}>
       <View style={styles.row}>
         <DatosCliente number={2} title={'CLIENTES BLOQUEADOS'} />
-        <DatosCliente number={12} title={'PEDIDOS'} />
+        <DatosCliente number={121} number2={'/165'} title={'PEDIDOS'} />
       </View>
       <View style={styles.row}>
         <DatosCliente number={0} title={'CLIENTES DEUDA PALLETS'} />

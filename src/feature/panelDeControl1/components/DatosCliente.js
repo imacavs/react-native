@@ -16,9 +16,16 @@ const styles = StyleSheet.create({
   containerNumber: {
     flex: 1,
     justifyContent: 'center',
+    flexDirection: 'row',
+    alignItems: 'baseline',
   },
   number: {
-    fontSize: 40,
+    fontSize: 50,
+    marginLeft: 5,
+    textAlign: 'center',
+  },
+  number2: {
+    fontSize: 30,
     marginLeft: 5,
     textAlign: 'center',
   },
@@ -41,7 +48,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const DatosCliente = ({number, title}) => {
+const DatosCliente = ({number, title, number2}) => {
   return (
     <View style={styles.container}>
       <View>
@@ -49,6 +56,7 @@ const DatosCliente = ({number, title}) => {
       </View>
       <View style={styles.containerNumber}>
         <Text style={styles.number}>{number}</Text>
+        <Text style={styles.number2}>{number2}</Text>
       </View>
       <View style={styles.datos}>
         <Text style={styles.verMas}>Ver mas</Text>
