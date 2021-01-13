@@ -11,7 +11,7 @@ import {StyleSheet, View, Text} from 'react-native';
 // import Switch from './otroTest4/components/Selector';
 // import ReduxTest from './ReduxTest';
 
-// import ClientesVista1 from './clientes1/index';
+import ClientesVista1 from './clientes1/index';
 import PanelControl from './panelDeControl1/index';
 
 import DetalleCliente from './detalleCliente/index';
@@ -22,6 +22,7 @@ import IconSimple from 'react-native-vector-icons/SimpleLineIcons';
 import IconAnt from 'react-native-vector-icons/AntDesign';
 import IconFeather from 'react-native-vector-icons/Feather';
 import IconFont from 'react-native-vector-icons/FontAwesome5';
+import ClienteDeudaPallets from './clienteDeudaPallets/index';
 
 const styles = StyleSheet.create({
   container: {
@@ -121,6 +122,8 @@ const App = () => {
       <View style={styles.lineaDivisoria} />
       <ClientesVista1 /> */}
 
+      <ClienteDeudaPallets />
+
       {/* <Actualizacion />
 
       <View>
@@ -136,10 +139,10 @@ const App = () => {
       </View> */}
       {/* <ReduxTest /> */}
 
-      <View style={styles.padreTitle}>
+      {/* <View style={styles.padreTitle}>
         <Text style={styles.title}>PANEL DE CONTROL</Text>
       </View>
-      <PanelControl />
+      <PanelControl /> */}
 
       {/* <Actualizacion />
       <DetalleCliente />

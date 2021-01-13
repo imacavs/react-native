@@ -1,29 +1,36 @@
-import {View} from 'native-base';
+import {View, Icon, Item, Input} from 'native-base';
 import React from 'react';
-import {TextInput, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     borderRadius: 10,
-    // borderColor: 'gray',
-    // borderWidth: 2,
     marginTop: 12,
     marginBottom: 12,
-    backgroundColor: 'white',
   },
 });
 
 const Buscador = ({value, setValue}) => {
   return (
-    <View>
-      <TextInput
+    <View style={styles.container}>
+      {/* <TextInput
         style={styles.container}
         placeholder={'Buscar Cliente'}
         onChangeText={(text) => {
           setValue(text);
         }}
         value={value}
-      />
+      /> */}
+      <Item>
+        <Input
+          placeholder="Buscar Cliente"
+          onChangeText={(text) => {
+            setValue(text);
+          }}
+          value={value}
+        />
+        <Icon active name="search" />
+      </Item>
     </View>
   );
 };

@@ -5,7 +5,7 @@ import VerMas from './VerMas';
 
 const styles = StyleSheet.create({
   containerPadre: {
-    marginTop: 18,
+    marginTop: 12,
     borderRadius: 10,
     display: 'flex',
   },
@@ -48,7 +48,13 @@ const Cards = ({cliente}) => {
               <Text style={styles.respuestaDatos2}>
                 Razon Social: {cliente.razonSocial}
               </Text>
-              <Text style={styles.datos}>N* Cliente: {cliente.nCliente}</Text>
+              <Text style={styles.respuestaDatos2}>
+                N* Cliente: {cliente.nCliente}
+              </Text>
+              <Text style={styles.respuestaDatos2}>Saldo: {cliente.saldo}</Text>
+              <Text style={styles.respuestaDatos2}>
+                Exigible: {cliente.exigible}
+              </Text>
             </View>
           </View>
           <View style={styles.paddingLeft}>

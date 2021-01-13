@@ -23,8 +23,12 @@ const styles = StyleSheet.create({
     marginBottom: 18,
   },
   containerGrafico: {
-    alignItems: 'center',
     marginLeft: 10,
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: 'red',
+    marginRight: 18,
   },
   numberRed: {
     fontSize: 32,
@@ -82,9 +86,7 @@ const Volumen = () => {
         <Text style={styles.title2}>SEPTIEMBRE</Text>
       </View>
       <View style={styles.containerGraficoYDatos}>
-        <View style={styles.containerGrafico}>
-          <Text>grafico</Text>
-        </View>
+        <View style={styles.containerGrafico} />
         <View style={styles.flex}>
           <View style={styles.containerNumbers}>
             <Text style={styles.numberRed}>1554</Text>

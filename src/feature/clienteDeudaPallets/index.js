@@ -2,8 +2,6 @@ import {} from 'native-base';
 import React from 'react';
 import {View, ScrollView} from 'react-native';
 import Card from './components/card';
-import Buscador from './components/Buscador';
-// import FooterApp from './components/footer';
 import Actualizacion from './components/Actualizar';
 
 let clientes = [
@@ -14,6 +12,8 @@ let clientes = [
     email: 'imanollopezQpepe',
     estado: 'avtivo',
     prioridad: 3,
+    saldo: 233,
+    exigible: 193,
   },
   {
     razonSocial: 'ceramica San Luis',
@@ -22,6 +22,8 @@ let clientes = [
     email: 'compras@ceramicasanluid.com',
     estado: 'activo',
     prioridad: 1,
+    saldo: 233,
+    exigible: 193,
   },
   {
     razonSocial: 'manolo',
@@ -30,6 +32,8 @@ let clientes = [
     email: 'imanollopezQpepe',
     estado: 'desactivo',
     prioridad: 2,
+    saldo: 233,
+    exigible: 193,
   },
   {
     razonSocial: 'manolo',
@@ -38,6 +42,8 @@ let clientes = [
     email: 'imanollopezQpepe',
     estado: 'desactivo',
     prioridad: 2,
+    saldo: 233,
+    exigible: 193,
   },
   {
     razonSocial: 'manolo',
@@ -46,6 +52,8 @@ let clientes = [
     email: 'imanollopezQpepe',
     estado: 'desactivo',
     prioridad: 2,
+    saldo: 233,
+    exigible: 193,
   },
   {
     razonSocial: 'manolo',
@@ -54,6 +62,8 @@ let clientes = [
     email: 'imanollopezQpepe',
     estado: 'desactivo',
     prioridad: 2,
+    saldo: 233,
+    exigible: 193,
   },
   {
     razonSocial: 'manolo',
@@ -62,6 +72,8 @@ let clientes = [
     email: 'imanollopezQpepe',
     estado: 'desactivo',
     prioridad: 2,
+    saldo: 233,
+    exigible: 193,
   },
   {
     razonSocial: 'manolo',
@@ -70,6 +82,8 @@ let clientes = [
     email: 'imanollopezQpepe',
     estado: 'desactivo',
     prioridad: 2,
+    saldo: 233,
+    exigible: 193,
   },
   {
     razonSocial: 'manolo',
@@ -78,6 +92,8 @@ let clientes = [
     email: 'imanollopezQpepe',
     estado: 'desactivo',
     prioridad: 2,
+    saldo: 233,
+    exigible: 193,
   },
   {
     razonSocial: 'manolo',
@@ -86,6 +102,8 @@ let clientes = [
     email: 'imanollopezQpepe',
     estado: 'desactivo',
     prioridad: 2,
+    saldo: 233,
+    exigible: 193,
   },
   {
     razonSocial: 'manolo',
@@ -94,6 +112,8 @@ let clientes = [
     email: 'imanollopezQpepe',
     estado: 'desactivo',
     prioridad: 2,
+    saldo: 233,
+    exigible: 193,
   },
   {
     razonSocial: 'manolo',
@@ -102,26 +122,22 @@ let clientes = [
     email: 'imanollopezQpepe',
     estado: 'desactivo',
     prioridad: 2,
+    saldo: 233,
+    exigible: 193,
   },
 ];
 
-const ClientesVista1 = () => {
-  const [valueSearch, setValueSearch] = React.useState('');
-
+const ClienteDeudaPallets = () => {
   return (
     <View>
       <Actualizacion />
-      <Buscador value={valueSearch} setValue={setValueSearch} />
       <ScrollView>
-        {clientes
-          .filter((e) => e.razonSocial.includes(valueSearch.toLowerCase()))
-          // .sort(valueSwitch === 'menor' ? mayorAMenor : menorAMayor)
-          .map((cliente, i) => (
-            <Card key={i} cliente={cliente} />
-          ))}
+        {clientes.map((cliente, i) => (
+          <Card key={i} cliente={cliente} />
+        ))}
       </ScrollView>
     </View>
   );
 };
 
-export default ClientesVista1;
+export default ClienteDeudaPallets;
