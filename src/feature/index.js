@@ -23,6 +23,7 @@ import IconAnt from 'react-native-vector-icons/AntDesign';
 import IconFeather from 'react-native-vector-icons/Feather';
 import IconFont from 'react-native-vector-icons/FontAwesome5';
 import ClienteDeudaPallets from './clienteDeudaPallets/index';
+import ListadoDePedidos from './ListadoDePedidos/index';
 
 const styles = StyleSheet.create({
   container: {
@@ -122,7 +123,9 @@ const App = () => {
       <View style={styles.lineaDivisoria} />
       <ClientesVista1 /> */}
 
-      <ClienteDeudaPallets />
+      {/* <ClienteDeudaPallets /> */}
+
+      <ListadoDePedidos />
 
       {/* <Actualizacion />
 
