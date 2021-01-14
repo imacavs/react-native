@@ -2,6 +2,7 @@ import React from 'react';
 import {Card, CardItem, Body} from 'native-base';
 import {StyleSheet, Text, View} from 'react-native';
 import VerMas from './VerMas';
+import ButtonNegative from './ButtonNegative';
 
 const styles = StyleSheet.create({
   containerPadre: {
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'gray',
     height: 1.5,
   },
-  containerGrafico: {
+  circulo: {
     marginLeft: 10,
     width: 20,
     height: 20,
@@ -60,7 +61,7 @@ const Cards = ({cliente}) => {
       <CardItem style={styles.border}>
         <Body style={styles.container2}>
           <View style={styles.container}>
-            <View style={styles.containerGrafico} />
+            <View style={styles.circulo} />
             <View style={styles.card}>
               <View>
                 <Text style={styles.respuestaDatos2}>
@@ -79,6 +80,7 @@ const Cards = ({cliente}) => {
             </View>
           </View>
           <View style={styles.lineaDivisoria} />
+          <ButtonNegative style={{}} />
         </Body>
       </CardItem>
     </Card>

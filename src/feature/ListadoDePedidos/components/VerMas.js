@@ -12,13 +12,15 @@ const styles = StyleSheet.create({
     fontSize: 10,
     color: 'gray',
   },
-  containerIcon: {},
+  icon: {
+    paddingTop: 18,
+  },
 });
 
 const VerMas = () => {
   return (
     <View style={styles.container}>
-      <Icon name="rightcircle" size={30} color="#A93226" />
+      <Icon name="rightcircle" size={30} color="#A93226" style={styles.icon} />
       <Text style={styles.text}>Ver Mas</Text>
     </View>
   );
