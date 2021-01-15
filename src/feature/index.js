@@ -11,28 +11,31 @@ import {StyleSheet, View, Text} from 'react-native';
 // import Switch from './otroTest4/components/Selector';
 // import ReduxTest from './ReduxTest';
 
-import ClientesVista1 from './clientes1/index';
-import PanelControl from './panelDeControl1/index';
+// import ClientesVista1 from './clientes1/index';
+// import PanelControl from './panelDeControl1/index';
 
-import DetalleCliente from './detalleCliente/index';
-import Actualizacion from './detalleCliente/components/Actualizacion';
-import Card from './detalleCliente/components/Card';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import IconSimple from 'react-native-vector-icons/SimpleLineIcons';
-import IconAnt from 'react-native-vector-icons/AntDesign';
-import IconFeather from 'react-native-vector-icons/Feather';
-import IconFont from 'react-native-vector-icons/FontAwesome5';
-import ClienteDeudaPallets from './clienteDeudaPallets/index';
-import ListadoDePedidos from './ListadoDePedidos/index';
+// import DetalleCliente from './detalleCliente/index';
+// import Actualizacion from './detalleCliente/components/Actualizacion';
+// import Card from './detalleCliente/components/Card';
+// import Icon from 'react-native-vector-icons/MaterialIcons';
+// import IconSimple from 'react-native-vector-icons/SimpleLineIcons';
+// import IconAnt from 'react-native-vector-icons/AntDesign';
+// import IconFeather from 'react-native-vector-icons/Feather';
+// import IconFont from 'react-native-vector-icons/FontAwesome5';
+// import ClienteDeudaPallets from './clienteDeudaPallets/index';
+
+// import ListadoDePedidos from './ListadoDePedidos/index';
+
+import Volumen from './volumen';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
-    // backgroundColor: '#F8F9F9',
+    // backgroundColor: 'white',
+    backgroundColor: '#F8F9F9',
     paddingHorizontal: 16,
     paddingVertical: 16,
     marginBottom: 16,
-    display: 'flex',
+    // display: 'flex',
     flex: 1,
   },
   title: {
@@ -57,20 +60,20 @@ const styles = StyleSheet.create({
   },
 });
 
-const iconoDinero = <Icon name="attach-money" size={25} color="#A93226" />;
-const iconoPedidos = (
-  <IconSimple name="screen-tablet" size={25} color="#A93226" />
-);
-const iconButton = <IconAnt name="rightcircle" size={18} color="#A93226" />;
-const iconEncuesta = <IconAnt name="profile" size={25} color="#A93226" />;
-const iconPallets = (
-  <IconFeather name="align-justify" size={25} color="#A93226" />
-);
-const iconVolumenH = <IconFeather name="bar-chart" size={25} color="#A93226" />;
-const iconContactos = <IconAnt name="idcard" size={35} color="#A93226" />;
-const iconTags = <IconAnt name="infocirlceo" size={25} color="#A93226" />;
-const iconVolumen = <IconAnt name="piechart" size={25} color="#A93226" />;
-const iconCtaCte = <IconFont name="piggy-bank" size={25} color="#A93226" />;
+// const iconoDinero = <Icon name="attach-money" size={25} color="#A93226" />;
+// const iconoPedidos = (
+//   <IconSimple name="screen-tablet" size={25} color="#A93226" />
+// );
+// const iconButton = <IconAnt name="rightcircle" size={18} color="#A93226" />;
+// const iconEncuesta = <IconAnt name="profile" size={25} color="#A93226" />;
+// const iconPallets = (
+//   <IconFeather name="align-justify" size={25} color="#A93226" />
+// );
+// const iconVolumenH = <IconFeather name="bar-chart" size={25} color="#A93226" />;
+// const iconContactos = <IconAnt name="idcard" size={35} color="#A93226" />;
+// const iconTags = <IconAnt name="infocirlceo" size={25} color="#A93226" />;
+// const iconVolumen = <IconAnt name="piechart" size={25} color="#A93226" />;
+// const iconCtaCte = <IconFont name="piggy-bank" size={25} color="#A93226" />;
 
 // let clientes = [
 //   {
@@ -125,7 +128,9 @@ const App = () => {
 
       {/* <ClienteDeudaPallets /> */}
 
-      <ListadoDePedidos />
+      <Volumen />
+
+      {/* <ListadoDePedidos /> */}
 
       {/* <Actualizacion />
 
@@ -140,6 +145,7 @@ const App = () => {
             <Card key={i} cliente={cliente} />
           ))}
       </View> */}
+
       {/* <ReduxTest /> */}
 
       {/* <View style={styles.padreTitle}>
